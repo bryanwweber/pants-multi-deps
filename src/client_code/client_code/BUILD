@@ -1,1 +1,1 @@
-python_sources()
+python_sources(resolve="client_code")

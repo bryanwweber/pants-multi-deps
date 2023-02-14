@@ -10,3 +10,11 @@ repo_id = "F4B583DE-7062-4E31-ABF2-5E3E3CA37BB1"
 
 [python]
 tailor_ignore_empty_init_files = false
+enable_resolves = true
+
+[python.resolves]
+ops_core = "3rdparty/ops_core.txt"
+client_code = "3rdparts/client_code.txt"
+
+[source]
+root_patterns = ["/src/client_code", "/src/ops_core"]
