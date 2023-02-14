@@ -20,12 +20,13 @@
                 ├── __init__.py
                 └── pathlib.py
 
-7 directories, 8 files
+7 directories, 9 files
 ```
 
 ```shell
 ❯ pants roots                                     
-src
+src/client_code
+src/ops_core
 ```
 
 ## Code
@@ -54,6 +55,11 @@ def AnyPath(p):
 de/client_code/client.py:
 
   * ops_core.data_io.pathlib.AnyPath (line: 1)
+
+These imports are not in the resolve used by the target (`client_code`), but they were present in 
+other resolves:
+
+  * ops_core.data_io.pathlib.AnyPath: 'ops_core' from src/ops_core/ops_core/data_io/pathlib.py
 
 If you do not expect an import to be inferrable, add `# pants: no-infer-dep` to the import line. O
 therwise, see https://www.pantsbuild.org/v2.14/docs/troubleshooting#import-errors-and-missing-depe
