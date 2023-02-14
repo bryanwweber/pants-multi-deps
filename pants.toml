@@ -7,3 +7,6 @@ backend_packages = [
 [anonymous-telemetry]
 enabled = true
 repo_id = "F4B583DE-7062-4E31-ABF2-5E3E3CA37BB1"
+
+[python]
+tailor_ignore_empty_init_files = false
